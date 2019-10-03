@@ -4,6 +4,11 @@
 //track how many times we win/lose
 //use jquery
 
+function sum (numberA,numberB) {
+	sum=numberA+numberB;
+	return sum;
+}
+
 var dieA = 1;
 var dieB =1;
 
@@ -33,7 +38,7 @@ function rollDice () {
 	//increment the total number of rolls by 1
 	//	numberOfRolls++ is the same as numberOfRolls+1
 	numberOfRolls ++;
-	sum=sum+parseInt(dieA)+parseInt(dieB);
+	sum=sum+dieA+dieB;
 	//console.log(numberOfRolls);
 
 	//invoke checkIsRollIsWinner function to see if you win
@@ -56,7 +61,7 @@ function magic () {
 	$('#dieB').attr("class", "dice-3");
 	numberOfRolls ++;
 	wins++;
-	sum=sum+parseInt(dieA)+parseInt(dieB);
+	sum=sum+dieA+dieB;
 
 }
 
